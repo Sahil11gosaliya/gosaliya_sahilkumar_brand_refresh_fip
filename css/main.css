@@ -38,21 +38,14 @@
         padding-left: 15px;
     }
 
-    .spacer {
-        margin-top: 60px;
-    }
-
-    .txt-spacer {
-        margin-top: 30px;
-    }
-
      /* ---End of General Styles--- */
 
    
 
+     /*Hero image*/
 
 .hero_img {
-   height: 400px;
+   height: 500px;
    overflow: hidden;
    object-fit: cover;
 }
@@ -63,6 +56,51 @@
     width: auto;
 }
 
+
+.hero-container {
+  position: relative;
+}
+
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-carousel img {
+  display: none;
+  width: 100%;
+  height: 500px;
+}
+
+.brand-text {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 300px;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.text {
+    margin: 0;
+    padding: 20px;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+}
+
+
+/*Testimony carousel*/
 
   .testimonial-slide {
     display: none;
@@ -85,7 +123,14 @@
   
   #prevBtn,
   #nextBtn {
-    margin-top: 10px;
+    display: inline-block;
+    background-color: #3880d8;
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    color: #ffffff;
+    text-align: center;
+    border: none;
   }
   
 
@@ -93,7 +138,7 @@
 
 
 
-
+/*contact form*/
   
   .form h3 {
     text-align: center;
@@ -147,6 +192,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: x-large;
+
 }
 
 
@@ -156,17 +202,18 @@
  
   
  
-  
+  /*footer*/
   
   .contact-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
+    margin-top: 50px;
   }
   
   .contact-info p {
-    margin: 0;
+    margin-top: 50px;
   }
   
   .phone {
@@ -185,12 +232,12 @@
     align-items: center;
     margin-bottom: 20px;
     height: 100px;
-    width: 400px;
+    width: 100%;
   }
   
   .social-media img {
     max-width: 100%;
-    height: auto;
+    height: 100px;
     align-items: center;
   }
   
@@ -202,3 +249,35 @@
     text-align: center;
   }
   
+
+
+/*banner and ad*/
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 200px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.promo {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.text {
+  font-size: 18px;
+}
