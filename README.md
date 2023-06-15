@@ -1,24 +1,31 @@
-# gosaliya_sahilkumar_hw3
-HW3
+# Midterm Project
 
-# midterm scaffold
+TODO: Brand refresh project
 
-scaffold created with xd as reference for two pages 
+## Installation
 
+TODO: Install the VS code, download the files on your system and make it run!
 
-# additional info
+## Usage
 
-the sizes for pictures are not ready yet,
-fonts will be arial or simliar to it with bold face
+TODO: It's an on scroll website to use
 
-box styles are ready along with wireframe and xd, css and html initiated
+## Contributing
 
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
-# contributing
+## History
 
-Sahilkumar Gosaliya
+TODO: Nothing Yet
 
+## Credits
 
-# license
+TODO: Sahilkumar Gosaliya
 
-MIT - all rights reserved
+## License
+
+TODO: MIT license
