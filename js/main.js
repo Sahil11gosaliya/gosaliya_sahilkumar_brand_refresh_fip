@@ -19,8 +19,8 @@ function showNextImage() {
   carouselImages[currentImageIndex].style.display = 'block';
 }
 
-// Change the image every 3 seconds
-setInterval(showNextImage, 3000);
+// Change the image every 2 seconds
+setInterval(showNextImage, 2000);
 
 
 
@@ -60,3 +60,17 @@ document.getElementById("prevBtn").addEventListener("click", prevSlide);
 document.getElementById("nextBtn").addEventListener("click", nextSlide);
 
 showSlide(slideIndex);
+
+
+
+// hamburger
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var hamburger = document.querySelector(".hamburger");
+  var mobileNav = document.querySelector(".mobile-nav");
+
+  hamburger.addEventListener("click", function() {
+    mobileNav.classList.toggle("show");
+  });
+});
