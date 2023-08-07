@@ -1,7 +1,7 @@
 
 ![FIP](images/promo.jpg)
 
-# gosaliya_sahil_music_mixer
+# gosaliya_sahil_brand_refresh_fip
  Brand refresh project [Final Integrated Project]
 
 # description
