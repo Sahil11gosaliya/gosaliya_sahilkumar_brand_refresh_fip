@@ -54,13 +54,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Get the current page URL
+
     const currentURL = window.location.href;
   
-    // Get all navigation links
+
     const navLinks = document.querySelectorAll('.nav-button');
   
-    // Add active class to the corresponding link
+    //  active class to the corresponding link
     navLinks.forEach(link => {
       if (link.href === currentURL) {
         link.classList.add('active');
@@ -69,11 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
+
+
 //accordian
-// JavaScript for Flavors Section
-
-// JavaScript code to handle accordion functionality
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
