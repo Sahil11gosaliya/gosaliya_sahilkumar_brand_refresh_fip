@@ -1,31 +1,29 @@
-# Midterm Project
 
-TODO: Brand refresh project
+![FIP](images/promo.jpg)
 
-## Installation
+# gosaliya_sahil_music_mixer
+ Brand refresh project [Final Integrated Project]
 
-TODO: Install the VS code, download the files on your system and make it run!
+# description
+This is a brand refresh website for an alchoholic beverage ZIMA. It is originated from 1998 but rebranded in 2019 on people's choice.
+It is made with html, css and javascript.
+It goes from its background story to modern day things. 
 
-## Usage
+# version / history
+1.0 - layout with grid system and on-go images
+2.0 - fixed issues, implemented functionalities and media along with information
+3.0 - responsive for mobile, tablet and desktop
 
-TODO: It's an on scroll website to use
+# how to use
+1. Clone the repo / Download the files
+2. Load it in your system
+3. Run it and have fun
 
-## Contributing
+# functionality
+Use your mouse or touch pad as it is responsive website and explore brand.
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+# contributing
+Sahilkumar Gosaliya - Student at Fanshawe
 
-## History
-
-TODO: Nothing Yet
-
-## Credits
-
-TODO: Sahilkumar Gosaliya
-
-## License
-
-TODO: MIT license
+# license
+MIT
