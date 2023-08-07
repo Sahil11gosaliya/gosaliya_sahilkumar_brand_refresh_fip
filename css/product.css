@@ -79,14 +79,14 @@ section p {
 /* Hamburger */
 .hamburger {
   display: none;
-  /* Hide the hamburger menu by default */
+  
 }
 
-/* Show the hamburger menu only on mobile screens */
+
 @media (max-width: 767px) {
   .hamburger {
     display: block;
-    /* Display the hamburger menu on mobile screens */
+    
   }
 }
 
@@ -186,31 +186,30 @@ nav a.active {
 
 
 .hero-container img {
-  width: 100%; /* This makes the image take up the entire container width */
+  width: 100%; 
   display: block;
-   /* Removes any default spacing issues */
-  /* height: 600px; */
+
  
 }
 
 
-/* Default styles for all screen sizes */
+
 .hero-container img {
-  width: 100%; /* Make the image fill its container */
-  height: 100%; /* Maintain the image's aspect ratio */
+  width: 100%; 
+  height: 100%; 
 }
 
-/* Tablet styles (adjust breakpoint as needed) */
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-container img {
-      max-height: 80%; /* Reduce image size for tablets */
+      max-height: 80%; 
   }
 }
 
-/* Mobile styles (adjust breakpoint as needed) */
+
 @media (max-width: 767px) {
   .hero-container img {
-      max-height: 60%; /* Further reduce image size for mobile */
+      max-height: 60%; 
   }
 }
 
@@ -234,18 +233,18 @@ nav a.active {
   }
 }
 
-/* Tablet styles (adjust breakpoint as needed) */
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .brand-text {
       font-size: 25px;
-      height: 200px; /* Reduce image size for tablets */
+      height: 200px; 
   }
 }
 
-/* Mobile styles (adjust breakpoint as needed) */
+
 @media (max-width: 767px) {
   .brand-text {
-    font-size: 15px; /* Further reduce image size for mobile */
+    font-size: 15px; 
   }
 }
 
