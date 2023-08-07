@@ -63,18 +63,20 @@ section p {
 /* ---End of General Styles--- */
 
 
-
-
- /* logo */
-
-.logo {
-  height: 50px;
-  width: auto;
-  mix-blend-mode: screen;
-}
-
-
-
+  
+  
+  
+ 
+   /* logo */
+  
+  .logo {
+    height: 50px;
+    width: auto;
+    mix-blend-mode: screen;
+  }
+  
+  
+  
 
 /* Hamburger */
 .hamburger {
@@ -160,22 +162,19 @@ section p {
 
 
 
-
-
-
-/*Hero image*/
-
-
-.navbar {
-  background-color: rgb(14, 14, 61);
-}
-
-
-nav a.active {
-  color: #007bff;
-  font-weight: bold;
-}
-
+  /*Hero image*/
+  
+  
+  .navbar {
+    background-color: rgb(14, 14, 61);
+  
+  }
+  
+  nav a.active {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
 .hero-container {
   position: relative;
   width: 100%;
@@ -251,23 +250,41 @@ nav a.active {
 
 
 
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   
+ 
+
+   .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+
+  
+  .text {
+    margin: 0;
+    padding: 15px;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  
+.banner img {
+  width: 100%;
+  height: 200px;
 }
+  
+  .flav img {
+    width: 20%;
+    height: auto;
+  }
+  
+  
+  
 
 
-
-.text {
-  margin: 0;
-  padding: 15px;
-  font-size: 30px;
-  color: #ffffff;
-  text-align: center;
-}
 
 /*banner and ad*/
 
@@ -298,33 +315,7 @@ nav a.active {
 
 .text {
   font-size: 18px;
-}
-
-
-
-
-/* dnd */
-
-
-.dragndrop {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-color: rgb(223, 217, 217);
-}
-
-
-
-
-.fl {
-  height: 150px;
-  border-radius: 50px;
-}
-
-
-.replaced-img {
-  max-height: 0;
-  display: none;
+  /* justify-content: left; */
 }
 
 
@@ -336,8 +327,45 @@ nav a.active {
 
 
 
+  /* Video container styles (optional) */
+.video-container {
+  max-width: 1200px;
+  border-radius: 4px;
+}
 
+/* Video player styles */
+video {
+  width: 600px;
+  height: auto;
+  border-radius: 4px; /* Adjust the height to maintain aspect ratio */
+}
 
+/* Customize video controls */
+video::-webkit-media-controls {
+  /* Styles for Safari and Chrome */
+
+  color: #fff;
+}
+
+video::-webkit-media-controls-enclosure {
+  /* Styles for Safari and Chrome */
+  border-radius: 8px;
+
+}
+
+video::-webkit-media-controls-play-button {
+  /* Styles for the play button */
+  background-color: rgba(54, 117, 253, 0.8);
+  border-radius: 10%;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
+
+video::-webkit-media-controls-volume-slider {
+  /* Styles for the volume slider */
+  background-color: #ffffff;
+}
 
 
 

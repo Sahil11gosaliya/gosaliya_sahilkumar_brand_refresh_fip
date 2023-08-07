@@ -1,83 +1,90 @@
-(function(){
-	"use strict";	
-	console.log("fired");
-})();
-
-//Can also be written like this:
-//(() => {  })();   
-
-// Info about IIFE https://flaviocopes.com/javascript-iife/
+  (function () {
+    "use strict";
+    console.log("fired");
+  })();
 
 
-
-// JavaScript code to handle carousel functionality
-const carouselImages = document.querySelectorAll('.hero-carousel img');
-let currentImageIndex = 0;
-
-function showNextImage() {
-  carouselImages[currentImageIndex].style.display = 'none';
-  currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-  carouselImages[currentImageIndex].style.display = 'block';
-}
-
-// Change the image every 3 seconds
-setInterval(showNextImage, 3000);
+// hamburger
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  var hamburger = document.querySelector(".hamburger");
+  var mobileNav = document.querySelector(".mobile-nav");
 
-//dnd flavour
+  hamburger.addEventListener("click", function() {
+    mobileNav.classList.toggle("show");
+  });
+});
 
 
-// Get the drag and drop zone element
+//active link
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current page URL
+  const currentURL = window.location.href;
+
+  // Get all navigation links
+  const navLinks = document.querySelectorAll('.nav-button');
+
+  // Add active class to the corresponding link
+  navLinks.forEach(link => {
+    if (link.href === currentURL) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+});
+
+
+
+//dnd
+
+document.addEventListener("DOMContentLoaded", function(){
 const dropzone = document.getElementById('dropzone');
+const replacedImages = document.querySelectorAll('.replaced-img img');
 
-// Add event listeners for drag and drop events
-dropzone.addEventListener('dragenter', dragEnter);
-dropzone.addEventListener('dragover', dragOver);
-dropzone.addEventListener('drop', drop);
-
-// Prevent default behavior for drag and drop events
-function dragEnter(e) {
-  e.preventDefault();
-}
-
-function dragOver(e) {
+function preventDefault(e) {
   e.preventDefault();
 }
 
 function drop(e) {
-  e.preventDefault();
+  preventDefault(e);
 
-  // Get the dropped flavor image's source URL
-  const droppedImageUrl = e.dataTransfer.getData('text/plain');
+  const droppedFlavor = e.dataTransfer.getData('text/flavor').toUpperCase();
 
-  // Replace the dropzone image with the dropped flavor image
-  const dropzoneImage = dropzone.querySelector('img');
-  dropzoneImage.src = droppedImageUrl;
+  let matchingImage = null;
 
-  // Replace the dropped flavor image with the dropzone image in the replaced-img div
-  const replacedImages = document.querySelectorAll('.replaced-img img');
-  replacedImages.forEach(image => {
-    if (image.getAttribute('data-flavor') === dropzoneImage.getAttribute('data-flavor')) {
-      image.src = droppedImageUrl;
+  for (const image of replacedImages) {
+    if (image.getAttribute('alt').toUpperCase() === droppedFlavor) {
+      matchingImage = image;
+      break;
     }
-  });
+  }
+
+  if (matchingImage) {
+    dropzone.innerHTML = `
+      <img class="dnd" src="${matchingImage.src}" alt="flavour">
+      <h3>${droppedFlavor}</h3>
+    `;
+  } else {
+    dropzone.innerHTML = `
+      <p>No matching image found for ${droppedFlavor}</p>
+    `;
+  }
 }
 
-// Enable dragging for the associated flavor images
+dropzone.addEventListener('dragenter', preventDefault);
+dropzone.addEventListener('dragover', preventDefault);
+dropzone.addEventListener('drop', drop);
+
 const associatedImages = document.querySelectorAll('.replaced-img img');
+
 associatedImages.forEach(image => {
   image.draggable = true;
-  image.addEventListener('dragstart', dragStart);
+
+  image.addEventListener('dragstart', e => {
+    e.dataTransfer.setData('text/flavor', image.getAttribute('alt'));
+  });
 });
-
-// Set the flavor image as the drag data
-function dragStart(e) {
-  const flavorImage = e.target;
-  const flavorImageUrl = flavorImage.getAttribute('src');
-  e.dataTransfer.setData('text/plain', flavorImageUrl);
-}
-
-
-
-//still image is not replacing! it is underflow
+});
