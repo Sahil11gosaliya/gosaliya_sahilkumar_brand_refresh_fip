@@ -6,64 +6,37 @@
 //Can also be written like this:
 //(() => {  })();   
 
-// Info about IIFE https://flaviocopes.com/javascript-iife/
-
-
-// JavaScript code to handle carousel functionality
-const carouselImages = document.querySelectorAll('.hero-carousel img');
-let currentImageIndex = 0;
-
-function showNextImage() {
-  carouselImages[currentImageIndex].style.display = 'none';
-  currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-  carouselImages[currentImageIndex].style.display = 'block';
-}
-
-// Change the image every 2 seconds
-setInterval(showNextImage, 2000);
-
-
-
-
-
-
 // testimony carousel
-
-var slideIndex = 0;
-var slides = document.getElementsByClassName("testimonial-slide");
+const intervalTime = 5000; // 5 seconds
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slider div');
 
 function showSlide(n) {
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
-  }
-  slideIndex = n;
-  slides[slideIndex].classList.add("active");
+    slides.forEach(slide => slide.style.display = 'none');
 }
 
-function prevSlide() {
-  slideIndex--;
-  if (slideIndex < 0) {
-    slideIndex = slides.length - 1;
-  }
-  showSlide(slideIndex);
+function changeSlide(n) {
+    currentSlide += n;
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
 }
 
-function nextSlide() {
-  slideIndex++;
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  }
-  showSlide(slideIndex);
+function startSlider() {
+    showSlide(currentSlide); // Show the first slide before starting the interval
+    setInterval(() => {
+        changeSlide(1);
+    }, intervalTime);
 }
 
-document.getElementById("prevBtn").addEventListener("click", prevSlide);
-document.getElementById("nextBtn").addEventListener("click", nextSlide);
-
-showSlide(slideIndex);
+startSlider();
 
 
 
-// hamburger
+// // hamburger
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -73,4 +46,60 @@ document.addEventListener("DOMContentLoaded", function() {
   hamburger.addEventListener("click", function() {
     mobileNav.classList.toggle("show");
   });
+});
+
+
+
+//active link
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the current page URL
+    const currentURL = window.location.href;
+  
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-button');
+  
+    // Add active class to the corresponding link
+    navLinks.forEach(link => {
+      if (link.href === currentURL) {
+        link.classList.add('active');
+      }
+    });
+  });
+  
+
+//accordian
+// JavaScript for Flavors Section
+
+// JavaScript code to handle accordion functionality
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const flavors = document.querySelectorAll(".flavor");
+
+    flavors.forEach(function (flavor) {
+        const description = flavor.querySelector(".description");
+        const toggleBtn = flavor.querySelector(".toggle-description");
+
+        toggleBtn.addEventListener("click", function () {
+            if (!flavor.classList.contains("show")) {
+                // Close other open accordion items when one is clicked
+                flavors.forEach(function (otherFlavor) {
+                    if (otherFlavor !== flavor && otherFlavor.classList.contains("show")) {
+                        otherFlavor.classList.remove("show");
+                        const otherToggleBtn = otherFlavor.querySelector(".toggle-description");
+                        otherToggleBtn.textContent = "Read More";
+                    }
+                });
+
+                flavor.classList.add("show");
+                toggleBtn.textContent = "Read Less";
+            } else {
+                flavor.classList.remove("show");
+                toggleBtn.textContent = "Read More";
+            }
+        });
+    });
 });
