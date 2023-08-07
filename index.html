@@ -4,13 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/grid.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <title>Midterm FIP </title>
+
+  <title>ZIMA BRAND REFRESH</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+<link href="css/grid.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
-  <h1 class="hidden">FIP Brand Refresh Midterm</h1>
+  <h1 class="hidden">FIP Brand Refresh </h1>
 
 
 
@@ -21,16 +27,29 @@
     </div>
 
 
-    <nav class="desktop tablet m-col-span-9 l-col-span-9 xl-col-span-9 box ">
+    <nav class="tablet m-col-span-9 l-col-span-9 xl-col-span-9 box ">
       <h2 class="hidden">Main Navigation</h2>
 
       <a href="index.html" class="nav-button">HOME</a>
-      <a href="#" class="nav-button">ABOUT</a>
+      <a href="about.html" class="nav-button">ABOUT</a>
       <a href="product.html" class="nav-button">FLAVOURS</a>
-      <a href="#" class="nav-button">SHOP</a>
+      <a href="shop.html" class="nav-button">SHOP</a>
       <a href="#" class="nav-button">CONTACT</a>
 
     </nav>
+
+    
+    <nav class="desktop m-col-span-9 l-col-span-9 xl-col-span-9 box ">
+      <h2 class="hidden">Main Navigation</h2>
+
+      <a href="index.html" class="nav-button">HOME</a>
+      <a href="about.html" class="nav-button">ABOUT</a>
+      <a href="product.html" class="nav-button">FLAVOURS</a>
+      <a href="shop.html" class="nav-button">SHOP</a>
+      <a href="#" class="nav-button">CONTACT</a>
+
+    </nav>
+
 
 
     <div class="hamburger mobile col-span-1 box">
@@ -42,9 +61,9 @@
         <h2 class="hidden">Main Navigation</h2>
         <ul class="burger">
           <li> <a href="index.html" class="nav-button">Home</a> </li>
-          <li> <a href="#" class="nav-button">About</a> </li>
+          <li> <a href="about.html" class="nav-button">About</a> </li>
           <li> <a href="product.html" class="nav-button">Flavours</a> </li>
-          <li> <a href="#" class="nav-button">Shop</a> </li>
+          <li> <a href="shop.html" class="nav-button">Shop</a> </li>
           <li> <a href="#" class="nav-button">Contact</a> </li>
         </ul>
       </nav>
@@ -58,26 +77,24 @@
 
 
 
+<main>
 
+  <section>
+    <h2 class="hidden">Hero Image</h2>
+    
+    <div class="hero-container col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
+        <img src="images/hero1.jpg" alt="Hero Image">
 
-  <main>
-    <section class="grid-con hero">
-      <h2 class="hidden">Hero Image</h2>
-      <div class="hero-container col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
-        <div class="hero-carousel">
-          <img src="images/a.jpg" alt="Hero Image 1">
-          <img src="images/b.jpg" alt="Hero Image 2">
-          <img src="images/c.jpg" alt="Hero Image 3">
+        <div class="brand-text col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
+          
+              <h2> ZIMA </h2>
+            <p>Quench your thirst and indulge in the ultimate cooling experience with our delightful range of
+                ZIMA Cold Drinks </p>
+         
+            
         </div>
-        <div class="brand-text">
-          <div class="overlay"></div>
-          <h2> ZIMA </h2>
-          <p>Quench your thirst and indulge in the ultimate cooling experience with our delightful range of ZIMA Cold
-            Drinks </p>
-        </div>
-      </div>
-    </section>
-
+    </div>
+</section>
 
 
 
@@ -85,15 +102,17 @@
     <section class="grid-con">
       <h2 class="hidden">Advertise </h2>
       <div class="image-container col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
-        <img src="images/ad.jpg" alt="Advertise">
+        <video class="gif" src="video/promo.mp4" autoplay loop muted></video>
         <div class="text-overlay">
-          <h2 class="promo">ZIMA</h2>
-          <p class="text"> Shop now and explore the ZIMA in various Flavours</p>
+          <h2 class="text">ZIMA</h2>
+          <p class="text"> Shop now and explore</p>
+        
         </div>
       </div>
     </section>
 
 
+   
     <section class="grid-con">
       <h2 class="hidden">Banner </h2>
       <div class="image-container col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
@@ -107,43 +126,63 @@
 
 
 
+
+
+
     <section class="grid-con">
-      <h2 class="hidden">Product Section </h2>
-      <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
-        <img src="images/fruit1.jpg" alt="product">
-        <h3> Berries </h3>
-        <p> Our Wild Berries flavor is a delicious blend of juicy berries and crisp citrus. Perfect for a hot summer
-          day, this drink will refresh your senses and leave you wanting more. </p>
-      </div>
+      <h2 class="hidden">Product Section</h2>
 
-      <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
-        <img src="images/fruit2.jpg" alt="product">
-        <h3> Mixed fruit </h3>
-        <p> Transport yourself to a tropical paradise with our refreshing Tropical flavor. This drink is bursting with
-          the flavors of exotic fruits and will make you feel like you're on vacation. </p>
+      <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
+      
+			<h2 > We Are Back With Something New</h2>
+      
+    </div>
+
+      <div class="flavor flavor-citrus col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
+        <img class="promo_img" src="images/fruit1.jpg" alt="promo 1">
+        <h3>BRAND NEW</h3>
+        <p class="description">Introducing our brand-new collection: where innovation meets style! Discover the latest trends and groundbreaking 
+          designs that redefine elegance and comfort. Embrace the future of fashion with our state-of-the-art materials and timeless
+          craftsmanship. Unleash your individuality and step into a world of limitless possibilities. Get ready to embark on an 
+          extraordinary journey with our brand-new line!</p>
+        <button class="toggle-description">Read More</button>
       </div>
+    
+      <div class="flavor flavor-raspberry col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
+        <img class="promo_img" src="images/fruit2.jpg" alt="promo 2">
+        <h3>REFRESHING</h3>
+        <p class="description">Experience the rejuvenating touch of our fresh arrivals! Engage in a revitalizing journey that awakens your senses 
+          and renews your vitality. Our invigorating collection ranges from refreshing and cool to lively and stimulating, 
+          aiming to uplift your spirits and energize your day. Embrace the true essence of renewal with each stride you take. 
+          Uncover the magic of rejuvenation with our exceptional offerings!</p>
+        <button class="toggle-description">Read More</button>
+      </div>
+    
+      <div class="flavor flavor-mango col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
+        <img class="promo_img" src="images/fruit3.jpg" alt="promo 3">
+        <h3>NATURAL</h3>
+        <p class="description">Embark on an exotic adventure with our tropical and nature-inspired selection! Immerse yourself in the allure
+          of tropical paradises and embrace the beauty of nature's finest elements. From lush palm prints to earthy tones, 
+          our collection transports you to far-off destinations and connects you with the wonders of the natural world. 
+          Indulge in the essence of the tropics and discover the harmony of nature in every detail. Embrace the allure of
+          paradise with our captivating designs!</p>
+        <button class="toggle-description">Read More</button>
+      </div>
+    
+   
 
 
-      <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
-        <img src="images/fruit3.jpg" alt="product">
-        <h3> Oranges </h3>
-        <p> If you love citrus flavors, our Citrus ZIMA is the perfect choice for you. Made with a blend of tangy
-          citrus fruits, this drink is perfect for a hot summer day or a night out with friends.</p>
-      </div>
+
     </section>
-
+    
 
     <section class="grid-con">
       <h2 class="hidden">Video </h2>
       <div class="vid col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
 
 
-        <video src="https://placehold.co/800x500.mp4" controls> </video>
-        <!-- <picture>
-            <source media="(min-width:1200px)" srcset="https://placehold.co/2200x840">
-            <source media="(min-width:768px)" srcset="https://placehold.co/1024x600">
-            <source media="(min-width:510px)" srcset="https://placehold.co/510x480">
-          </picture> -->
+        <video src="video/zima.mp4" controls> </video>
+
 
 
       </div>
@@ -151,34 +190,21 @@
 
     <section class="grid-con">
       <h2 class="hidden">Testimony & Map </h2>
-      <div class="testimonial-carousel col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6 box">
-        <div class="testimonial-slide active">
-          <img src="images/t.jpg" alt="Testimonial 1">
-          <h3>Testimonial 1</h3>
-          <p>Rating Time</p>
-        </div>
-        <div class="testimonial-slide">
-          <img src="images/t1.jpg" alt="Testimonial 2">
-          <h3>Testimonial 2</h3>
-          <p>Customer Delight</p>
-        </div>
-        <div class="testimonial-slide">
-          <img src="images/t2.png" alt="Testimonial 3">
-          <h3>Testimonial 3</h3>
-          <p>People's choice</p>
-        </div>
-        <button id="prevBtn">
-          <img class="toggle" src="images/lt.png" alt="back">
-        </button>
-        <button id="nextBtn">
-          <img class="toggle" src="images/gt.png" alt="forward">
-        </button>
+      <div class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6 box">
+        <div class="slider-container">
+          <div class="slider">
+            <img src="images/t1.png" alt="User 1">
+            <img src="images/t2.png" alt="User 2">
+            <img src="images/t3.png" alt="User 3">
+            <img src="images/t4.png" alt="User 4">
+          </div>
+      </div>
+        <h2> Testimonial</h2>
       </div>
 
 
       <div class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6 box">
-        <img src="images/map.png" alt="map">
-        <!-- <iframe src="https://goo.gl/maps/n9hVuLchsXU4LX3r9" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+        <img class="map_pic" src="images/map.png" alt="map">
         <h2> We are here!</h2>
       </div>
     </section>
@@ -186,8 +212,11 @@
 
     <section class="grid-con">
       <h2 class="hidden">Feedback Form</h2>
-      <div class="form col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
-        <h3>Feedback Form</h3>
+
+
+      <div class="col-span-4 m-col-span-3 l-col-span-3 xl-col-span-3 box"></div>
+      <div class="form col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6 box">
+        <h2>Your Feedback Matters, Connect With Us</h2>
         <form>
           <div class="form-group">
             <label for="firstName"></label>
@@ -213,6 +242,7 @@
           <button type="submit">Submit</button>
         </form>
       </div>
+      <div class="col-span-4 m-col-span-3 l-col-span-3 xl-col-span-3 box"></div>
     </section>
 
 
@@ -220,21 +250,28 @@
 
   <footer>
 
-    <section class="grid-con">
+    <section class="footer grid-con">
       <h2 class="hidden">Footer/Dead End</h2>
-      <div class="footer col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
-        <div class="logo-wrapper">
-          <img class="logo" src="images/main_logo.svg" alt="ZIMA logo">
+
+
+
+        <div class="f_text col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
+          <h3 class="copyright">+1 (555) 123-4567</h3>
+          <h3 class="copyright">1234 Elm Street
+            Cityville, Stateville 56789
+            Countryland</h3>
+          <h3 class="copyright"> info@zimadrinks.com</h3>
         </div>
-        <div class="contact-info">
-          <p class="phone">+888 445 5817</p>
-          <p class="address">ZIMA, Churchgate Street, Ontario, CA - 232 JPQ</p>
-          <p class="email">contact.zima23@hotline.mail</p>
+
+
+        <div class="f_logo col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
+            <img class="logo" src="images/main_logo.svg" alt="ZIMA logo">
         </div>
-        <div class="social-media">
-          <img src="images/social.jpg" alt="Social Media Icons">
-        </div>
-        <p>© All rights reserved @ ZIMA</p>
+      
+
+        <div class="icons_img col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 box">
+          <img src="images/social.png" alt="Social Media Icons">
+         <h3 class="copyright">© All rights reserved @ ZIMA</h3>
       </div>
     </section>
 
