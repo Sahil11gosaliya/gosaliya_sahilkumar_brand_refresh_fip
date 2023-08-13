@@ -6,33 +6,35 @@
 //Can also be written like this:
 //(() => {  })();   
 
-// testimony carousel
-const intervalTime = 5000; // 5 seconds
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slider div');
+//  testimony carousel this was for hero image carousel
 
-function showSlide(n) {
-    slides.forEach(slide => slide.style.display = 'none');
-}
+// const intervalTime = 5000; // 5 seconds
+// let currentSlide = 0;
+// const slides = document.querySelectorAll('.slider div');
 
-function changeSlide(n) {
-    currentSlide += n;
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    } else if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
-    }
-    showSlide(currentSlide);
-}
+// function showSlide(n) {
+//     slides.forEach(slide => slide.style.display = 'none');
+// }
 
-function startSlider() {
-    showSlide(currentSlide); // Show the first slide before starting the interval
-    setInterval(() => {
-        changeSlide(1);
-    }, intervalTime);
-}
+// function changeSlide(n) {
+//     currentSlide += n;
+//     if (currentSlide >= slides.length) {
+//         currentSlide = 0;
+//     } else if (currentSlide < 0) {
+//         currentSlide = slides.length - 1;
+//     }
+//     showSlide(currentSlide);
+// }
 
-startSlider();
+// function startSlider() {
+//     showSlide(currentSlide); // Show the first slide before starting the interval
+//     setInterval(() => {
+//         changeSlide(1);
+//     }, intervalTime);
+// }
+
+// startSlider(); 
+
 
 
 
@@ -101,3 +103,59 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+
+// dnd for flavours
+
+
+//dnd
+
+document.addEventListener("DOMContentLoaded", function(){
+    const dropzone = document.getElementById('dropzone');
+    const replacedImages = document.querySelectorAll('.replaced-img img');
+    
+    function preventDefault(e) {
+      e.preventDefault();
+    }
+    
+    function drop(e) {
+      preventDefault(e);
+    
+      const droppedFlavor = e.dataTransfer.getData('text/flavor').toUpperCase();
+    
+      let matchingImage = null;
+    
+      for (const image of replacedImages) {
+        if (image.getAttribute('alt').toUpperCase() === droppedFlavor) {
+          matchingImage = image;
+          break;
+        }
+      }
+    
+      if (matchingImage) {
+        dropzone.innerHTML = `
+          <img class="dnd" src="${matchingImage.src}" alt="flavour">
+          <h3>${droppedFlavor}</h3>
+        `;
+      } else {
+        dropzone.innerHTML = `
+          <p>No matching image found for ${droppedFlavor}</p>
+        `;
+      }
+    }
+    
+    dropzone.addEventListener('dragenter', preventDefault);
+    dropzone.addEventListener('dragover', preventDefault);
+    dropzone.addEventListener('drop', drop);
+    
+    const associatedImages = document.querySelectorAll('.replaced-img img');
+    
+    associatedImages.forEach(image => {
+      image.draggable = true;
+    
+      image.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/flavor', image.getAttribute('alt'));
+      });
+    });
+    });
